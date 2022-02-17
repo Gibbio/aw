@@ -1,0 +1,20 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0a6cc58..fcd8348 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.6)
+ 
+ project(azurestoragelite)
+ set(CMAKE_CXX_STANDARD 11)
++set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+ 
+ option(BUILD_TESTS       "Build test codes"                  OFF)
+ option(BUILD_SAMPLES     "Build sample codes"                OFF)
+@@ -121,7 +122,6 @@ set(AZURE_STORAGE_LITE_SOURCE
+   src/http/libcurl_http_client.cpp
+ 
+   src/blob/blob_client.cpp
+-  src/blob/blob_client_wrapper.cpp
+ )
+ 
+ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
